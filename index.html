@@ -1,55 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+/* Import, Install, etc. Open Props */
+@import "https://unpkg.com/open-props";
+/* Import of Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&display=swap');
 
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="print.css" media="print">
-    <link rel="stylesheet" href="style.css" media="screen">
 
-    <!-- Scripts -->
-    <script src="script.js" defer></script>
-    
-    <title>EWU Fight Song by Victor E. Eagle</title>
-</head>
-<body>
-    
-   
-<main>
+/* Diagnostic Styling */
+* {
+  outline: 1px double gray;
+}
 
-    <audio src="ewufightsong.mp3" controls></audio>
-    
-    <h1>
-      <a href="https://www.youtube.com/watch?v=h1BIRNVdugw">EWU "Scuffle" Song<a>
-    </h1>
-    
-    <figure>
-      <p>Go, Eagles, Go</p>
-        <p>Put all you have in every play</p>
-        <p>We’ll let you know</p>
-        <p>That we are with you all way</p>
-    </figure>
-    
-    <figure>
-      <p>So then it’s fight, Eagles, fight</p>
-        <p>Show us the fight we’d like to see</p>
-        <p>Red and White just fight, fight, fight</p>
-        <p>And Eagles will win the victory!</p>
-    </figure>
-    
-    <figure>
-      <p>EASTERN! Eastern Eagles GO FIGHT WIN!</p>      
-    </figure>
-                
-    </main>
+body {
+  background : var(--gradient-24);
+  height: 100vh;
+}
 
-</body>
-</html>
+/* Main Container */
+main {
+  width: 800px;
+  margin: 0 auto 0 auto;
+  padding: 32px;
+}
+
+audio {
+  width: 100%;
+}
+
+/* score: 0,0,0,1 */
+h1 {
+  text-align: center;
+}
+
+/* score: 0,0,1,1 */
+h1:hover {
+  animation: var(--animation-shake-x);
+}
+
+h1 a {
+  font-family: "Barriecito";
+  color: white;
+  text-decloration: none;
+}
+
+h1 a:hover {
+  color: var(--indigo-10)
+}
+
+/* Snarky Ass Comments */
+span {
+  font-family: "Barriecito";
+  font-size: 24px;
+  padding: 12px;
+  
+  background: rgba(255,255,255,.5);
+  border-radius: var(--radius-blob-5);
+}
+
+span:hover {
+  display: inline-block;
+  animation: var(--animation-shake-x)
+}
